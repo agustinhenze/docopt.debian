@@ -1,0 +1,42 @@
+Source: docopt
+Section: python
+Priority: optional
+Maintainer: Agustin Henze <tin@debian.org>
+Build-Depends: debhelper (>= 9),
+ python-all,
+ python-setuptools,
+ python3-all,
+ python3-setuptools,
+Standards-Version: 3.9.4
+X-Python-Version: >= 2.5
+Homepage: http://docopt.org
+Vcs-Git: git://anonscm.debian.org/collab-maint/docopt.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/docopt.git
+
+Package: python-docopt
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}
+Description: Creates beautiful command-line interfaces
+ docopt helps you:
+ .
+ * define interface for your command-line app, and
+ * automatically generate parser for it.
+ .
+ docopt is based on conventions that are used for decades in help messages and
+ man pages for program interface description. Interface description in docopt
+ is such a help message, but formalized.
+
+Package: python3-docopt
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Description: Creates beautiful command-line interfaces (Python3)
+ docopt helps you:
+ .
+ * define interface for your command-line app, and
+ * automatically generate parser for it.
+ .
+ docopt is based on conventions that are used for decades in help messages and
+ man pages for program interface description. Interface description in docopt
+ is such a help message, but formalized.
+ .
+ This is the Python 3 compatible version of the package.

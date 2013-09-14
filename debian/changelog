@@ -1,0 +1,5 @@
+docopt (0.6.1-1) unstable; urgency=low
+
+  * Initial release. (Closes: #XXXXXX)
+
+ -- Agustin Henze <tin@debian.org>  Sat, 14 Sep 2013 17:33:36 -0300

@@ -1,3 +1,13 @@
+docopt (0.6.2-1) unstable; urgency=medium
+
+  * Use uscan in get-orig target
+  * Imported Upstream version 0.6.2
+  * Improve package description thanks to Justin B Rye (Closes: #725710)
+  * Bumped Standard-Version to 3.9.5 (no changes required)
+  * Use pybuild as buildsystem
+
+ -- Agustin Henze <tin@debian.org>  Tue, 24 Jun 2014 09:14:44 -0300
+
 docopt (0.6.1-1) unstable; urgency=low
 
   * Initial release. (Closes: #722935)

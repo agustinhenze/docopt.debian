@@ -7,6 +7,7 @@ Build-Depends: debhelper (>= 9),
  python-setuptools,
  python3-all,
  python3-setuptools,
+ dh-python,
 Standards-Version: 3.9.5
 X-Python-Version: >= 2.5
 Homepage: http://docopt.org

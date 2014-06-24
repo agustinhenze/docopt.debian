@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 9),
  python-setuptools,
  python3-all,
  python3-setuptools,
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 X-Python-Version: >= 2.5
 Homepage: http://docopt.org
 Vcs-Git: git://anonscm.debian.org/collab-maint/docopt.git

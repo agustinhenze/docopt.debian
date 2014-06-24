@@ -6,7 +6,7 @@ command-line interfaces with Python <http://youtu.be/pXhcPJK5cMc>`_
 
     New in version 0.6.1:
 
-    - Fix issue [#85](https://github.com/docopt/docopt/issues/85)
+    - Fix issue `#85 <https://github.com/docopt/docopt/issues/85>`_
       which caused improper handling of ``[options]`` shortcut
       if it was present several times.
 
@@ -87,7 +87,7 @@ Installation
 
 Use `pip <http://pip-installer.org>`_ or easy_install::
 
-    pip install docopt==0.6.1
+    pip install docopt==0.6.2
 
 Alternatively, you can just drop ``docopt.py`` file into your
 project--it is self-contained.
@@ -425,8 +425,9 @@ first release with stable API will be 1.0.0 (soon).  Until then, you
 are encouraged to specify explicitly the version in your dependency
 tools, e.g.::
 
-    pip install docopt==0.6.1
+    pip install docopt==0.6.2
 
+- 0.6.2 `Wheel <http://pythonwheels.com/>`_ support.
 - 0.6.1 Bugfix release.
 - 0.6.0 ``options_first`` parameter.
   **Breaking changes**: Corrected ``[options]`` meaning.

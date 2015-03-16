@@ -4,16 +4,32 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-PACKAGE_NAME := $(shell dpkg-parsechangelog -SSource)
-UPSTREAM_VERSION := $(shell dpkg-parsechangelog -SVersion | cut -d- -f1)
-export PYBUILD_NAME=$(PACKAGE_NAME)
+PACKAGE_NAME := $(shell dpkg-parsechangelog | grep Source: | cut -d " " -f2)
+UPSTREAM_VERSION := $(shell dpkg-parsechangelog | grep Version: | cut -d " " -f2 | cut -d- -f1)
+PYVERS :=  python2.7
+PY3VERS := $(shell py3versions -s)
 
 %:
-	dh $@ --with python2,python3 --buildsystem=pybuild
+	dh $@ --with python2,python3
 
 override_dh_auto_clean:
 	dh_auto_clean
 	rm -f debian/upstream_changelog
+	rm -rf docopt.egg-info/
+	rm -rf build
+
+override_dh_auto_install:
+	set -ex; \
+	for py in $(PYVERS); do \
+			$$py setup.py install --root debian/python-docopt \
+								  --install-layout=deb; \
+	done
+	set -ex; \
+	for py in $(PY3VERS); do \
+			$$py setup.py install --root debian/python3-docopt \
+								  --install-layout=deb; \
+	done
+
 
 override_dh_installchangelogs:
 	grep -A 10000 Changelog README.rst | grep -A 1000 $(UPSTREAM_VERSION) > debian/upstream_changelog

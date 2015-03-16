@@ -1,3 +1,10 @@
+docopt (0.6.2-1~bpo70+1) wheezy-backports; urgency=medium
+
+  * Rebuild for wheezy-backports.
+  * Change debian/rules to be compatible with wheezy (dh-python is missing)
+
+ -- Agustin Henze <tin@debian.org>  Mon, 16 Mar 2015 12:22:42 -0300
+
 docopt (0.6.2-1) unstable; urgency=medium
 
   * Use uscan in get-orig target

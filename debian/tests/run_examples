@@ -1,0 +1,7 @@
+for file in $(ls examples/*.py); do
+    python3 $file -h
+done
+
+for file in $(ls examples/*.py); do
+    python $file -h
+done

@@ -1,0 +1,6 @@
+Tests: unittests, run_examples
+Depends: @,
+ python3-pytest,
+ python3-schema,
+ python-pytest,
+ python-schema,

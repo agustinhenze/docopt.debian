@@ -1,3 +1,14 @@
+docopt (0.6.2-2) unstable; urgency=medium
+
+  * [d/control] Remove obsolete X-Python-Version
+  * Bumped Standards-Version to 4.2.0 (no changes needed)
+  * Update Vcs-* fields pointing to salsa
+  * Update dh to 11
+  * [d/rules] Use variables defined on pkg-info.mk
+  * Add (autopkg)tests
+
+ -- Agustin Henze <tin@debian.org>  Fri, 17 Aug 2018 16:16:51 +0200
+
 docopt (0.6.2-1) unstable; urgency=medium
 
   * Use uscan in get-orig target

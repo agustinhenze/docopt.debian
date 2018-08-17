@@ -4,9 +4,9 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-PACKAGE_NAME := $(shell dpkg-parsechangelog -SSource)
-UPSTREAM_VERSION := $(shell dpkg-parsechangelog -SVersion | cut -d- -f1)
-export PYBUILD_NAME=$(PACKAGE_NAME)
+include /usr/share/dpkg/pkg-info.mk
+
+export PYBUILD_NAME=$(DEB_SOURCE)
 
 %:
 	dh $@ --with python2,python3 --buildsystem=pybuild
@@ -16,13 +16,5 @@ override_dh_auto_clean:
 	rm -f debian/upstream_changelog
 
 override_dh_installchangelogs:
-	grep -A 10000 Changelog README.rst | grep -A 1000 $(UPSTREAM_VERSION) > debian/upstream_changelog
+	grep -A 10000 Changelog README.rst | grep -A 1000 $(DEB_VERSION_UPSTREAM) > debian/upstream_changelog
 	dh_installchangelogs debian/upstream_changelog
-
-get-orig-source:
-	@if [ ! -d "debian" ] ; then \
-		echo 'Run this from the top directory of the Debian source' >&2; \
-		exit 1; \
-	fi
-	uscan --noconf --verbose --rename --destdir=$(CURDIR) \
-		--check-dirname-level=0 --force-download --download-version $(UPSTREAM_VERSION)

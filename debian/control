@@ -10,8 +10,8 @@ Build-Depends: debhelper (>= 9),
  dh-python,
 Standards-Version: 4.2.0
 Homepage: http://docopt.org
-Vcs-Git: git://anonscm.debian.org/collab-maint/docopt.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/docopt.git
+Vcs-Git: https://salsa.debian.org/debian/docopt.git
+Vcs-Browser: https://salsa.debian.org/debian/docopt
 
 Package: python-docopt
 Architecture: all
